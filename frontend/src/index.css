@@ -1,40 +1,119 @@
+/* Google Fonts IMPORT MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
-.font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
-
-@layer utilities {
-  .gradient-brand { background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899); }
-  .gradient-text { background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(148, 163, 184, 0.1); }
-  .glass-light { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.08); }
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .gradient-brand {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fadeIn { animation: fadeIn 0.25s ease-out; }
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
 
 /* Print styles */
 @media print {
-  body { background: white !important; color: #1e293b !important; }
-  .glass, .glass-light { background: white !important; backdrop-filter: none !important; border: 1px solid #e2e8f0 !important; }
-  .gradient-brand { background: #3b82f6 !important; }
-  .gradient-text { -webkit-text-fill-color: #1e293b !important; }
-  .text-white { color: #1e293b !important; }
-  .text-slate-300, .text-slate-400, .text-slate-500 { color: #475569 !important; }
-  .text-blue-400 { color: #2563eb !important; }
-  .text-purple-400 { color: #7c3aed !important; }
+  body {
+    background: white !important;
+    color: #1e293b !important;
+  }
+
+  .glass,
+  .glass-light {
+    background: white !important;
+    backdrop-filter: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .gradient-brand {
+    background: #3b82f6 !important;
+  }
+
+  .gradient-text {
+    -webkit-text-fill-color: #1e293b !important;
+  }
+
+  .text-white {
+    color: #1e293b !important;
+  }
+
+  .text-slate-300,
+  .text-slate-400,
+  .text-slate-500 {
+    color: #475569 !important;
+  }
+
+  .text-blue-400 {
+    color: #2563eb !important;
+  }
+
+  .text-purple-400 {
+    color: #7c3aed !important;
+  }
 }
 
 /* Custom scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.2); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.4); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
